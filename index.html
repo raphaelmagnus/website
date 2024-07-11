@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R | Personal Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
         body, html {
@@ -16,7 +16,7 @@
             height: 100%;
         }
         .container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -28,8 +28,10 @@
             border-bottom: 1px solid #eee;
         }
         .logo {
+            font-family: 'Playfair Display', serif;
             font-size: 3em;
             font-weight: 700;
+            color: #2c3e50;
         }
         nav a {
             margin-left: 20px;
@@ -39,7 +41,7 @@
             transition: color 0.3s ease;
         }
         nav a:hover, nav a.active {
-            color: #888;
+            color: #2c3e50;
         }
         .content {
             padding: 50px 0;
@@ -48,38 +50,39 @@
         h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
+            color: #2c3e50;
         }
         h2 {
             font-size: 1.8em;
             margin-top: 30px;
             margin-bottom: 15px;
+            color: #2c3e50;
         }
         p {
             margin-bottom: 20px;
         }
         .essay-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
+            list-style-type: none;
+            padding: 0;
         }
         .essay-item {
-            border: 1px solid #eee;
-            border-radius: 5px;
-            overflow: hidden;
-            transition: box-shadow 0.3s ease;
-        }
-        .essay-item:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
         }
         .essay-item img {
-            width: 100%;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             object-fit: cover;
+            margin-right: 20px;
+            border-radius: 5px;
         }
         .essay-item h3 {
-            padding: 10px;
-            margin: 0;
-            font-size: 1.2em;
+            margin: 0 0 10px 0;
+            font-size: 1.4em;
+            color: #2c3e50;
         }
         .about-info {
             display: flex;
@@ -95,6 +98,7 @@
         .about-item i {
             font-size: 2em;
             margin-bottom: 10px;
+            color: #2c3e50;
         }
         .hidden {
             display: none;
@@ -113,24 +117,36 @@
 
         <div id="home" class="content">
             <h1>Essays</h1>
-            <div class="essay-list">
-                <div class="essay-item">
-                    <img src="/api/placeholder/250/150" alt="The Art of Writing">
-                    <h3>The Art of Writing</h3>
-                </div>
-                <div class="essay-item">
-                    <img src="/api/placeholder/250/150" alt="Technology and Society">
-                    <h3>Technology and Society</h3>
-                </div>
-                <div class="essay-item">
-                    <img src="/api/placeholder/250/150" alt="Everyday Philosophy">
-                    <h3>Everyday Philosophy</h3>
-                </div>
-                <div class="essay-item">
-                    <img src="/api/placeholder/250/150" alt="The Future of Work">
-                    <h3>The Future of Work</h3>
-                </div>
-            </div>
+            <ul class="essay-list">
+                <li class="essay-item">
+                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Writing">
+                    <div>
+                        <h3>The Art of Writing</h3>
+                        <p>Exploring the nuances of effective communication through the written word.</p>
+                    </div>
+                </li>
+                <li class="essay-item">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Technology">
+                    <div>
+                        <h3>Technology and Society</h3>
+                        <p>Examining the profound impact of technological advancements on our social structures.</p>
+                    </div>
+                </li>
+                <li class="essay-item">
+                    <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Philosophy">
+                    <div>
+                        <h3>Everyday Philosophy</h3>
+                        <p>Uncovering philosophical insights in our daily experiences and routines.</p>
+                    </div>
+                </li>
+                <li class="essay-item">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Work">
+                    <div>
+                        <h3>The Future of Work</h3>
+                        <p>Predicting and analyzing emerging trends in employment and career development.</p>
+                    </div>
+                </li>
+            </ul>
         </div>
 
         <div id="about" class="content hidden">
